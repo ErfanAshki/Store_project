@@ -8,7 +8,16 @@
 
 {% block content %}
 
-    <h2>homeeee</h2>
+    <h2>homeeee</h2> <br>
+
+    {% if user.is_authenticated %}
+        welcome {{ user.username }} |
+        <a href="{% url 'account_logout' %}">logout</a>
+    {% else %}
+        <a href="{% url 'account_login' %}">login</a> |
+            <a href="{% url 'account_signup' %}">signup</a>
+
+    {% endif %}
 
 {% endblock content %}
 
