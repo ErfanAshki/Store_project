@@ -1,10 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>{% block page_title %}home page{% endblock page_title %}</title>
-</head>
-<body>
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block page_title %}home page{% endblock page_title %}
 
 {% block content %}
 
@@ -12,15 +10,10 @@
 
     {% if user.is_authenticated %}
         welcome {{ user.username }} |
-        <a href="{% url 'account_logout' %}">logout</a>
+        <a class="btn btn-danger" href="{% url 'account_logout' %}">logout</a>
     {% else %}
-        <a href="{% url 'account_login' %}">login</a> |
-            <a href="{% url 'account_signup' %}">signup</a>
-
+        <a class="btn btn-info" href="{% url 'account_login' %}">login</a> |
+        <a class="btn btn-primary" href="{% url 'account_signup' %}">signup</a>
     {% endif %}
 
 {% endblock content %}
-
-</body>
-</html>
-
