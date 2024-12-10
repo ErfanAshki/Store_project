@@ -39,14 +39,14 @@ class ProductDetailView(generic.DetailView):
 
 class ProductCreateView(generic.CreateView):
     model = Product
-    fields = ['title', 'body', 'price', 'active']
+    fields = ['title', 'body', 'price', 'image']
     template_name = 'products/product_create.html'
     context_object_name = 'form'
 
 
 class ProductUpdateView(generic.UpdateView):
     model = Product
-    fields = ['title', 'body', 'price', 'active']
+    fields = ['title', 'body', 'price', 'image']
     template_name = 'products/product_update.html'
     context_object_name = 'form'
 

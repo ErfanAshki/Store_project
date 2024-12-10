@@ -6,11 +6,24 @@
 
 {% block content %}
 
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <button type="submit" class="btn btn-primary mt-3">save</button>
-    </form>
+    <div class="main-content-wrapper">
+        <div class="page-content-inner pt--75 pb--80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-sm--50">
+                        <div class="login-box">
+                            <h3 class="heading__tertiary mb--30">ساخت محصول جدید</h3>
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                <button type="submit" class="btn btn-primary mt-3">save</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock content %}
 
