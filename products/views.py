@@ -6,9 +6,29 @@ from .models import Product
 
 
 class ProductListView(generic.ListView):
-    model = Product
-    template_name = 'products/product_list.html'
+    template_name = 'products/product_list_categories.html'
     context_object_name = 'products'
+
+    def get_queryset(self):
+        return Product.objects.filter(id__in=[7, 17])
+
+
+class MenProductListView(generic.ListView):
+    template_name = 'products/product_men_list.html'
+    context_object_name = 'products'
+    paginate_by = 4
+
+    def get_queryset(self):
+        return Product.objects.filter(category='Men shoes')
+
+
+class WomenProductListView(generic.ListView):
+    template_name = 'products/product_women_list.html'
+    context_object_name = 'products'
+    paginate_by = 4
+
+    def get_queryset(self):
+        return Product.objects.filter(category='Women shoes')
 
 
 class ProductDetailView(generic.DetailView):
