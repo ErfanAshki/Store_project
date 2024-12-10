@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block page_title %}{{ product.title }} page{% endblock page_title %}
+
+{% block content %}
+
+    <h3>{{ product.title }}</h3>
+    <p>{{ product.body }}</p>
+    <h4>{{ product.price }}</h4>
+    <p>{{ product.datetime_created }}</p>
+    <h3>{{ product.active }}</h3>
+
+{% endblock content %}
+
