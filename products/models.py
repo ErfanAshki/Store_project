@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import reverse
 
 
 class Product(models.Model):
@@ -10,3 +11,11 @@ class Product(models.Model):
     # image
     is_pay = models.BooleanField(default=False)
     active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f"{self.title}"
+
+    def get_absolute_url(self):
+        return reverse('product_detail', args=[self.id])
+
+

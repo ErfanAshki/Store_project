@@ -12,5 +12,10 @@
     <p>{{ product.datetime_created }}</p>
     <h3>{{ product.active }}</h3>
 
+    <a href="{% url 'product_list' %}" class="btn btn-primary mt-5">list of products</a> <br>
+    <a href="{% url 'product_create' %}" class="btn btn-info mt-3">create product</a> <br>
+    <a href="{% url 'product_update' product.id %}" class="btn btn-warning mt-3">Update</a> <br>
+    <a href="{% url 'product_delete' product.id %}" class="btn btn-danger mt-3">Delete</a>
+
 {% endblock content %}
 

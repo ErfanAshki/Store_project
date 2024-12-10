@@ -7,7 +7,7 @@
 {% block content %}
 
     {% for product in products %}
-        <h3>{{ product.title }}</h3>
+        <a href="{{ product.get_absolute_url }}"><h3>{{ product.title }}</h3></a>
         <p>{{ product.body|truncatewords:50 }}</p>
         <h4>{{ product.price }}</h4>
         --------------------------------------------------------------
