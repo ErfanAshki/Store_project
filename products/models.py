@@ -13,7 +13,7 @@ class Product(models.Model):
     price = models.PositiveIntegerField(default=100)
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
-    image = models.ImageField(upload_to='shoes_pic')
+    image = models.ImageField(upload_to='shoes_pic', null=True, blank=True)
     is_pay = models.BooleanField(default=False)
     active = models.BooleanField(default=True)
 
