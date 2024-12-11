@@ -46,10 +46,12 @@
                                         <a href="{% url 'product_men' %}">{{ product.category }}</a>
                                     {% endif %}
                                 </p>
-                                <p><span class="m-0">تغییرات محصول:</span>
-                                    <a href="{% url 'product_update' product.id %}">Update</a> |
-                                    <a href="{% url 'product_delete' product.id %}">Delete</a>
-                                </p>
+                                {% if user.is_staff %}
+                                    <p><span class="m-0">تغییرات محصول:</span>
+                                        <a href="{% url 'product_update' product.id %}">Update</a> |
+                                        <a href="{% url 'product_delete' product.id %}">Delete</a>
+                                    </p>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

@@ -38,7 +38,7 @@ class ProductDetailView(generic.DetailView):
     context_object_name = 'product'
 
 
-class ProductCreateView(generic.CreateView, UserPassesTestMixin):
+class ProductCreateView(UserPassesTestMixin, generic.CreateView):
     model = Product
     fields = ['title', 'body', 'price', 'image']
     template_name = 'products/product_create.html'
@@ -49,7 +49,7 @@ class ProductCreateView(generic.CreateView, UserPassesTestMixin):
         return obj.publisher == self.request.user
 
 
-class ProductUpdateView(generic.UpdateView, UserPassesTestMixin):
+class ProductUpdateView(UserPassesTestMixin, generic.UpdateView):
     model = Product
     fields = ['title', 'body', 'price', 'image']
     template_name = 'products/product_update.html'
@@ -60,7 +60,7 @@ class ProductUpdateView(generic.UpdateView, UserPassesTestMixin):
         return obj.publisher == self.request.user
 
 
-class ProductDeleteView(generic.DeleteView, UserPassesTestMixin):
+class ProductDeleteView(UserPassesTestMixin, generic.DeleteView):
     model = Product
     template_name = 'products/product_delete.html'
     context_object_name = 'product'

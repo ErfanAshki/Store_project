@@ -1,7 +1,7 @@
 {% load i18n %}
 
-{% autoescap off %}
+{% autoescape off %}
 
 {% blocktrans %} Please confirm your email {% endblocktrans %}
 
-{% endautoescap %}
+{% endautoescape %}
