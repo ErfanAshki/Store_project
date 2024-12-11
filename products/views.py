@@ -1,6 +1,7 @@
 from django.shortcuts import render, reverse
 from django.views import generic
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 from .models import Product
 
@@ -37,23 +38,35 @@ class ProductDetailView(generic.DetailView):
     context_object_name = 'product'
 
 
-class ProductCreateView(generic.CreateView):
+class ProductCreateView(generic.CreateView, UserPassesTestMixin):
     model = Product
     fields = ['title', 'body', 'price', 'image']
     template_name = 'products/product_create.html'
     context_object_name = 'form'
 
+    def test_func(self):
+        obj = self.get_object()
+        return obj.publisher == self.request.user
 
-class ProductUpdateView(generic.UpdateView):
+
+class ProductUpdateView(generic.UpdateView, UserPassesTestMixin):
     model = Product
     fields = ['title', 'body', 'price', 'image']
     template_name = 'products/product_update.html'
     context_object_name = 'form'
 
+    def test_func(self):
+        obj = self.get_object()
+        return obj.publisher == self.request.user
 
-class ProductDeleteView(generic.DeleteView):
+
+class ProductDeleteView(generic.DeleteView, UserPassesTestMixin):
     model = Product
     template_name = 'products/product_delete.html'
     context_object_name = 'product'
     success_url = reverse_lazy('product_list')
+
+    def test_func(self):
+        obj = self.get_object()
+        return obj.publisher == self.request.user
 
