@@ -26,3 +26,19 @@ class Product(models.Model):
         return reverse('product_detail', args=[self.id])
 
 
+class Comment(models.Model):
+    STAR_CHOICES = (
+        ('1', 'very bad'),
+        ('2', 'bad'),
+        ('3', 'normal'),
+        ('4', 'good'),
+        ('5', 'very good')
+    )
+    text = models.TextField()
+    author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments')
+    datetime_created = models.DateTimeField(auto_now_add=True)
+    datetime_modified = models.DateTimeField(auto_now=True)
+    stars = models.CharField(max_length=10, choices=STAR_CHOICES)
+    active = models.BooleanField(default=True)
+
