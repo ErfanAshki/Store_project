@@ -120,7 +120,7 @@
                                                 <div class="col-lg-8 m-auto">
                                                     <span class="reply-title pull-right">نظر خود را بنویسید</span>
                                                     <br>
-                                                    <form action="{% url 'product_comment' product.id %}" method="post">
+                                                    <form class="mt-4" action="{% url 'product_comment' product.id %}" method="post">
                                                         {% csrf_token %}
                                                         {{ comment_form|crispy }}
                                                         <input type="submit" value="submit">

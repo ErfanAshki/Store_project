@@ -39,12 +39,12 @@ class Comment(models.Model):
         ('4', 'good'),
         ('5', 'very good')
     )
-    text = models.TextField()
+    text = models.TextField(verbose_name='comment_text')
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments')
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)
-    stars = models.CharField(max_length=10, choices=STAR_CHOICES)
+    stars = models.CharField(max_length=10, choices=STAR_CHOICES, verbose_name='rate for this shoes')
     active = models.BooleanField(default=True)
 
     # Managers
