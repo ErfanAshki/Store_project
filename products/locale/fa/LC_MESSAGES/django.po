@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-12 20:28+0330\n"
+"POT-Creation-Date: 2024-12-12 22:30+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\models.py:37
+msgid "very bad"
+msgstr "خیلی بد"
+
+#: .\models.py:38
+msgid "bad"
+msgstr "بد"
+
+#: .\models.py:39
+msgid "normal"
+msgstr "معمولی"
+
+#: .\models.py:40
+msgid "good"
+msgstr "خوب"
+
+#: .\models.py:41
+msgid "very good"
+msgstr "خیلی خوب"
+
+#: .\models.py:43
+msgid "comment_text"
+msgstr "متن نظر"
+
+#: .\models.py:48
+msgid "rate for this shoes"
+msgstr "امتیاز برای این کفش"
+
 #: .\templates\products\product_create.html:7
 msgid "create new product page"
 msgstr "صفحه ساخت محصول جدید"
@@ -76,7 +105,7 @@ msgstr "توضیحات محصول"
 
 #: .\templates\products\product_detail.html:75
 msgid "comments"
-msgstr "نظرات"
+msgstr "نظرات برای"
 
 #: .\templates\products\product_detail.html:88
 msgid "comments for"
