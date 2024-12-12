@@ -62,15 +62,11 @@ class CommentCreateView(generic.CreateView):
         return super().form_valid(form)
 
 
-class ProductCreateView(UserPassesTestMixin, generic.CreateView):
+class ProductCreateView(generic.CreateView):
     model = Product
-    fields = ['title', 'body', 'price', 'image']
+    fields = ['title', 'body', 'category', 'price', 'image', 'publisher']
     template_name = 'products/product_create.html'
     context_object_name = 'form'
-
-    def test_func(self):
-        obj = self.get_object()
-        return obj.publisher == self.request.user
 
 
 class ProductUpdateView(UserPassesTestMixin, generic.UpdateView):

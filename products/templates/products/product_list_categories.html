@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
 
+{% load i18n %}
+
 {% load crispy_forms_tags %}
 
 {% block page_title %}product list page{% endblock page_title %}
@@ -19,7 +21,7 @@
                                 <div class="container row align-items-center">
                                     <div class="col-lg-12 mb-md--50 mb-xs--10">
                                         <div class="shop-toolbar__left d-flex align-items-sm-center align-items-start flex-sm-row flex-column">
-                                            <h1 class="product-pages">categories of shoes</h1>
+                                            <h1 class="product-pages">{% trans 'categories of shoes' %}</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +53,7 @@
                                                     </figure>
                                                     <div class="product-info">
                                                         <h3 class="product-title h6 mb--15">
-                                                            <a href="{% url 'product_men' %}">Men shoes</a>
+                                                            <a href="{% url 'product_men' %}">{% translate 'Men shoes' %}</a>
                                                         </h3>
                                                     </div>
                                                 </div>
@@ -75,7 +77,7 @@
                                                     </figure>
                                                     <div class="product-info">
                                                         <h3 class="product-title mb--15">
-                                                            <a href="{% url 'product_women' %}">Women shoes</a>
+                                                            <a href="{% url 'product_women' %}">{% trans 'Women shoes' %}</a>
                                                         </h3>
                                                     </div>
                                                 </div>
