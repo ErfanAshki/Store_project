@@ -26,6 +26,11 @@ class Product(models.Model):
         return reverse('product_detail', args=[self.id])
 
 
+class ActiveCommentsManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset(ActiveCommentsManager, self).filter(active=True)
+
+
 class Comment(models.Model):
     STAR_CHOICES = (
         ('1', 'very bad'),
@@ -42,3 +47,6 @@ class Comment(models.Model):
     stars = models.CharField(max_length=10, choices=STAR_CHOICES)
     active = models.BooleanField(default=True)
 
+    # Managers
+    objects = models.Manager()
+    active_comments_manager = ActiveCommentsManager()
