@@ -1,8 +1,10 @@
 {% extends '_base.html' %}
 
+{% load i18n %}
+
 {% load crispy_forms_tags %}
 
-{% block page_title %}delete {{ product.title }} page{% endblock page_title %}
+{% block page_title %}{% trans 'delete' %} {{ product.title }} {% trans 'page' %}{% endblock page_title %}
 
 {% block content %}
 
@@ -12,11 +14,11 @@
                 <div class="row">
                     <div class="col-md-6 mb-sm--50">
                         <div class="login-box">
-                            <h3 class="heading__tertiary mb--30">حذف محصول</h3>
+                            <h3 class="heading__tertiary mb--30">{% trans 'delete product' %}</h3>
                             <form action="" method="post">
                                 {% csrf_token %}
-                                <h2>do you want to delete {{ product.title }} ?</h2>
-                                <button type="submit" class="btn btn-danger">Yes</button>
+                                <h2>{% trans 'do you want to delete' %} {{ product.title }} ?</h2>
+                                <button type="submit" class="btn btn-danger">{% trans 'Yes' %}</button>
                             </form>
                         </div>
                     </div>
