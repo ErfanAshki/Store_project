@@ -62,11 +62,14 @@ class CommentCreateView(generic.CreateView):
         return super().form_valid(form)
 
 
-class ProductCreateView(generic.CreateView):
+class ProductCreateView(UserPassesTestMixin, generic.CreateView):
     model = Product
     fields = ['title', 'body', 'category', 'price', 'image', 'publisher']
     template_name = 'products/product_create.html'
     context_object_name = 'form'
+
+    def test_func(self):
+        return self.request.user.is_superuser
 
 
 class ProductUpdateView(UserPassesTestMixin, generic.UpdateView):
