@@ -55,19 +55,19 @@
                             <ul class="mainmenu d-lg-flex jusity-content-end jusity-content-lg-start pt-4">
                                 <li class="mainmenu__item menu-item-has-children active">
                                     <a href="{% url 'product_list' %}" class="mainmenu__link">
-                                        <span class="mm-text">دسته بندی محصولات</span>
+                                        <span class="mm-text">{% trans 'product categories' %}</span>
                                     </a>
                                 </li>
                                 {% if user.is_staff %}
                                     <li class="mainmenu__item menu-item-has-children active">
                                         <a href="{% url 'product_create' %}" class="mainmenu__link">
-                                            <span class="mm-text">ساخت محصول جدید</span>
+                                            <span class="mm-text">{% trans 'create new product' %}</span>
                                         </a>
                                     </li>
                                 {% endif %}
                                 <li class="mainmenu__item active">
                                     <a href="{% url 'about_us' %}" class="mainmenu__link">
-                                        <span class="mm-text">تماس با ما</span>
+                                        <span class="mm-text">{% trans 'contact us' %}</span>
                                     </a>
                                 </li>
                             </ul>
@@ -93,16 +93,16 @@
                             </a>
                             <ul class="user-info-menu">
                                 <li>
-                                    <a class="text-right" href="my-account.html">حساب کاربری</a>
+                                    <a class="text-right" href="my-account.html">{% trans 'account' %}</a>
                                 </li>
                                 <li>
-                                    <a class="text-right" href="cart.html">سبد خرید</a>
+                                    <a class="text-right" href="cart.html">{% trans 'cart' %}</a>
                                 </li>
                                 <li>
-                                    <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
+                                    <a class="text-right" href="wishlist.html">{% trans 'favorites' %}</a>
                                 </li>
                                 <li>
-                                    <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
+                                    <a class="text-right" href="order-tracking.html">{% trans 'order history' %}</a>
                                 </li>
                             </ul>
                         </li>
@@ -125,6 +125,16 @@
 <!-- Header End -->
 
 
+{% if messages %}
+    <div class="container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+
 {% block content %}
 
 
@@ -143,13 +153,13 @@
                     </div>
                     <div class="footer-widget mb--50 pb--1">
                         <ul class="footer-menu">
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">قوانین و مقررات</a></li>
-                            <li><a href="">تماس با ما</a></li>
+                            <li><a href="">{% translate 'about us' %}</a></li>
+                            <li><a href="">{% trans 'rules and principles' %}</a></li>
+                            <li><a href="">{% trans 'contact us' %}</a></li>
                         </ul>
                     </div>
                     <div class="footer-widget">
-                        Shoes Land | The best shoes
+                        {% trans 'Shoes Land | The best shoes' %}
                     </div>
                 </div>
             </div>

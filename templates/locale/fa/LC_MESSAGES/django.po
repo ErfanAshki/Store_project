@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-12 21:44+0330\n"
+"POT-Creation-Date: 2024-12-13 14:17+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,13 +16,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: .\about_us.html:7
-msgid "About us page"
-msgstr ""
 
-#: .\about_us.html:11
+#: .\_base.html:58
+msgid "product categories"
+msgstr "دسته بندی محصولات"
+
+#: .\_base.html:64
+msgid "create new product"
+msgstr "ساخت محصول جدید"
+
+#: .\_base.html:70 .\_base.html:158
+msgid "contact us"
+msgstr "تماس با ما"
+
+#: .\_base.html:96
+msgid "account"
+msgstr "حساب شخصی"
+
+#: .\_base.html:99
+msgid "cart"
+msgstr "سبد خرید"
+
+#: .\_base.html:102
+msgid "favorites"
+msgstr "علاقه مندی ها"
+
+#: .\_base.html:105
+msgid "order history"
+msgstr "تاریخچه سفارشات"
+
+#: .\_base.html:156 .\about_us.html:11
 msgid "about us"
 msgstr "درباره ما"
+
+#: .\_base.html:157
+msgid "rules and principles"
+msgstr "قوانین و مققرات"
+
+#: .\_base.html:162
+msgid "Shoes Land | The best shoes"
+msgstr ""
+
+#: .\about_us.html:7
+msgid "About us page"
+msgstr "صفحه درباره ما"
 
 #: .\account\email\email_confirmation_message.txt:5
 #, python-format

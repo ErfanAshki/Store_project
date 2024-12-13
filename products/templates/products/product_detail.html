@@ -23,7 +23,7 @@
                             <img class="m-auto" style="max-height: 400px;"
                                  src="{{ product.image.url }}"
                                  alt="">
-                        {% endif %}
+                        {% endif %}s
                     </div>
                     <div class="col-12 col-sm-8 product-main-details mt-md--50">
                         <div class="product-summary pl-lg--30 pl-md--0 text-right p-4">
@@ -96,9 +96,9 @@
                                                                      alt="Review Avatar" class="review__avatar">
                                                                 <div>
                                                                     <div class="review__meta mr-5">
-                                                                        <strong class="review__author text-success px-4">{{ comment.author }}</strong>
-                                                                        <span class="review__dash pr-4">-</span>
                                                                         <span class="text-primary">{{ comment.datetime_created }}</span>
+                                                                        <span class="review__dash pr-4">-</span>
+                                                                        <strong class="review__author text-success px-4">{{ comment.author }}</strong>
                                                                     </div>
                                                                     <div class="product-rating mr--60">
                                                                         <div class="m-0 star-rating star-five">
@@ -109,7 +109,7 @@
                                                                 </div>
                                                             </div>
                                                             <p class="review__description text-right px-4 pr--100">
-                                                                {{ comment.text }}
+                                                               {% trans 'comment body' %} : {{ comment.text }}
                                                             </p>
                                                         </div>
                                                     </div>

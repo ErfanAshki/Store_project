@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 import django.core.mail.backends.console
+from django.contrib.messages import constants
 
 from pathlib import Path
 from environs import Env
@@ -196,3 +197,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "erfanbayern111@gmail.com"
 EMAIL_HOST_PASSWORD = "yatocfglduoxjeqr "
 EMAIL_PORT = 587
+
+# messages config
+MESSAGE_TAGS = {
+    constants. ERROR: 'danger',
+}

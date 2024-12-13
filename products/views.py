@@ -2,6 +2,9 @@ from django.shortcuts import render, reverse, get_object_or_404
 from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
+from django.utils.translation import gettext as _
 
 from .models import Product, Comment
 from .forms import CommentForm
@@ -59,14 +62,16 @@ class CommentCreateView(generic.CreateView):
         product = get_object_or_404(Product, pk=product_id)
         form_object.product = product
         form_object.save()
+        messages.success(self.request, _('Your comment successfully saved'))
         return super().form_valid(form)
 
 
-class ProductCreateView(UserPassesTestMixin, generic.CreateView):
+class ProductCreateView(UserPassesTestMixin, SuccessMessageMixin, generic.CreateView):
     model = Product
     fields = ['title', 'body', 'category', 'price', 'image', 'publisher']
     template_name = 'products/product_create.html'
     context_object_name = 'form'
+    success_message = _('new product successfully saved.')
 
     def test_func(self):
         return self.request.user.is_superuser
@@ -78,6 +83,10 @@ class ProductUpdateView(UserPassesTestMixin, generic.UpdateView):
     template_name = 'products/product_update.html'
     context_object_name = 'form'
 
+    def form_valid(self, form):
+        messages.warning(self.request, _('product successfully update'))
+        return super().form_valid(form)
+
     def test_func(self):
         obj = self.get_object()
         return obj.publisher == self.request.user
@@ -88,6 +97,10 @@ class ProductDeleteView(UserPassesTestMixin, generic.DeleteView):
     template_name = 'products/product_delete.html'
     context_object_name = 'product'
     success_url = reverse_lazy('product_list')
+
+    def form_valid(self, form):
+        messages.error(self.request, _('product successfully delete'))
+        return super().form_valid(form)
 
     def test_func(self):
         obj = self.get_object()
