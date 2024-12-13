@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 import django.core.mail.backends.console
+from django.contrib.messages import constants
 
 from pathlib import Path
 from environs import Env
@@ -20,7 +21,6 @@ env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -32,7 +32,6 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 DEBUG = env.bool("DJANGO_DEBUG")
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'herokuapp.com']
-
 
 # Application definition
 
@@ -49,13 +48,13 @@ INSTALLED_APPS = [
     'pages',
     'products',
 
-
     # downloaded apps
     'crispy_forms',
     'crispy_bootstrap5',
     'crispy_bootstrap4',
     'allauth',
     'allauth.account',
+    'rosetta',
 
 ]
 
@@ -81,7 +80,6 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
-
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
@@ -102,7 +100,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
@@ -116,7 +113,6 @@ DATABASES = {
         'PORT': 5432,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -136,18 +132,29 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+# i18n config
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa'
 
-TIME_ZONE = 'UTC'
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian')
+)
+
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tehran'
 
 USE_I18N = True
-
 USE_TZ = True
+USE_L10N = True
 
+# locale config
+LOCALE_PATHS = (
+    'templates/locale',
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -158,7 +165,6 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 # media config
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -191,3 +197,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "erfanbayern111@gmail.com"
 EMAIL_HOST_PASSWORD = "yatocfglduoxjeqr "
 EMAIL_PORT = 587
+
+# messages config
+MESSAGE_TAGS = {
+    constants. ERROR: 'danger',
+}

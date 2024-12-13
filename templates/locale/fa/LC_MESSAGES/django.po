@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-13 14:17+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\_base.html:58
+msgid "product categories"
+msgstr "دسته بندی محصولات"
+
+#: .\_base.html:64
+msgid "create new product"
+msgstr "ساخت محصول جدید"
+
+#: .\_base.html:70 .\_base.html:158
+msgid "contact us"
+msgstr "تماس با ما"
+
+#: .\_base.html:96
+msgid "account"
+msgstr "حساب شخصی"
+
+#: .\_base.html:99
+msgid "cart"
+msgstr "سبد خرید"
+
+#: .\_base.html:102
+msgid "favorites"
+msgstr "علاقه مندی ها"
+
+#: .\_base.html:105
+msgid "order history"
+msgstr "تاریخچه سفارشات"
+
+#: .\_base.html:156 .\about_us.html:11
+msgid "about us"
+msgstr "درباره ما"
+
+#: .\_base.html:157
+msgid "rules and principles"
+msgstr "قوانین و مققرات"
+
+#: .\_base.html:162
+msgid "Shoes Land | The best shoes"
+msgstr ""
+
+#: .\about_us.html:7
+msgid "About us page"
+msgstr "صفحه درباره ما"
+
+#: .\account\email\email_confirmation_message.txt:5
+#, python-format
+msgid ""
+"\n"
+"Hello from %(site_name)s\n"
+"If you requested this email , please confirm your email.\n"
+"click on the link below:\n"
+"%(activate_url)s\n"
+msgstr ""
+
+#: .\account\email\email_confirmation_subject.txt:5
+msgid " Please confirm your email "
+msgstr "لطفا ایمیل خود را تایید کنید"
+
+#: .\account\email_confirm.html:6 .\account\email_confirm.html:10
+msgid "Confirm Email Address"
+msgstr "لطفا ایمیل خود را تایید کنید"
+
+#: .\account\email_confirm.html:16
+#, python-format
+msgid ""
+"Please confirm that\n"
+"                    <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
+"address for user %(user_display)s\n"
+"                    ."
+msgstr ""
+
+#: .\account\email_confirm.html:25
+msgid "Confirm"
+msgstr "تایید"
+
+#: .\account\email_confirm.html:31
+#, python-format
+msgid ""
+"Unable to confirm %(email)s because it is already confirmed by a different\n"
+"                    account."
+msgstr ""
+
+#: .\account\email_confirm.html:38
+#, python-format
+msgid ""
+"This email confirmation link expired or is invalid. Please\n"
+"                <a href=\"%(email_url)s\">issue a new email confirmation "
+"request</a>."
+msgstr ""
+
+#: .\account\login.html:7 .\account\login.html:15 .\home.html:17
+msgid "login"
+msgstr "ورود"
+
+#: .\account\login.html:17
+msgid "don't have an account??"
+msgstr "اکانتی ندارید ؟؟"
+
+#: .\account\logout.html:7 .\home.html:15
+msgid "logout"
+msgstr "خروج"
+
+#: .\account\logout.html:13
+msgid "Do you want to logout?"
+msgstr "آیا می خواهید خارج شوید ؟"
+
+#: .\account\logout.html:16
+msgid "Yes"
+msgstr "بله"
+
+#: .\account\signup.html:7 .\account\signup.html:15 .\home.html:18
+msgid "signup"
+msgstr "ثبت نام"
+
+#: .\account\signup.html:17
+msgid "already have an account!!"
+msgstr "قبلا یک اکانت داشتید !!"
+
+#: .\home.html:7
+msgid "home page"
+msgstr "صفحه خانه"
+
+#: .\home.html:11
+msgid "home"
+msgstr "خانه"
+
+#: .\home.html:14
+msgid "welcome"
+msgstr "خوش آمدی"

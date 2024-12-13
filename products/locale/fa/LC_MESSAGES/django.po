@@ -1,0 +1,172 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-13 14:14+0330\n"
+"PO-Revision-Date: 2024-12-13 13:43+0330\n"
+"Last-Translator:   <er@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: .\models.py:37
+msgid "very bad"
+msgstr "خیلی بد"
+
+#: .\models.py:38
+msgid "bad"
+msgstr "بد"
+
+#: .\models.py:39
+msgid "normal"
+msgstr "معمولی"
+
+#: .\models.py:40
+msgid "good"
+msgstr "خوب"
+
+#: .\models.py:41
+msgid "very good"
+msgstr "خیلی خوب"
+
+#: .\models.py:43
+msgid "comment_text"
+msgstr "متن نظر"
+
+#: .\models.py:48
+msgid "rate for this shoes"
+msgstr "امتیاز برای این کفش"
+
+#: .\templates\products\product_create.html:7
+msgid "create new product page"
+msgstr "صفحه ساخت محصول جدید"
+
+#: .\templates\products\product_create.html:17
+msgid "create new product"
+msgstr "ساخت محصول جدید"
+
+#: .\templates\products\product_create.html:21
+#: .\templates\products\product_update.html:21
+msgid "save"
+msgstr "ذخیره کردن"
+
+#: .\templates\products\product_delete.html:7
+msgid "delete"
+msgstr "حذف کردن"
+
+#: .\templates\products\product_delete.html:7
+#: .\templates\products\product_detail.html:11
+msgid "page"
+msgstr "صفحه"
+
+#: .\templates\products\product_delete.html:17
+msgid "delete product"
+msgstr "صفحه حذف"
+
+#: .\templates\products\product_delete.html:20
+msgid "do you want to delete"
+msgstr "آیا می خواهی حذف کنی"
+
+#: .\templates\products\product_delete.html:21
+msgid "Yes"
+msgstr "بله"
+
+#: .\templates\products\product_detail.html:33
+#: .\templates\products\product_men_list.html:60
+#: .\templates\products\product_women_list.html:60
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\products\product_detail.html:44
+#: .\templates\products\product_men_list.html:63
+#: .\templates\products\product_women_list.html:63
+msgid "add to cart"
+msgstr "اضافه به سبد خرید"
+
+#: .\templates\products\product_detail.html:48
+msgid "category"
+msgstr "دسته بندی"
+
+#: .\templates\products\product_detail.html:56
+msgid "product changes"
+msgstr "تغییرات محصول"
+
+#: .\templates\products\product_detail.html:71
+msgid "product description"
+msgstr "توضیحات محصول"
+
+#: .\templates\products\product_detail.html:75
+msgid "comments"
+msgstr "نظرات "
+
+#: .\templates\products\product_detail.html:88
+msgid "comments for"
+msgstr "نظرات برای"
+
+#: .\templates\products\product_detail.html:112
+msgid "comment body"
+msgstr "متن نظر"
+
+#: .\templates\products\product_detail.html:123
+msgid "write your comment"
+msgstr "نظرتان را بنویسید"
+
+#: .\templates\products\product_detail.html:128
+msgid "submit"
+msgstr "ارسال"
+
+#: .\templates\products\product_list_categories.html:24
+msgid "categories of shoes"
+msgstr "دسته بندی کفش ها"
+
+#: .\templates\products\product_list_categories.html:56
+msgid "Men shoes"
+msgstr "کفش مردانه"
+
+#: .\templates\products\product_list_categories.html:80
+msgid "Women shoes"
+msgstr "کفش زنانه"
+
+#: .\templates\products\product_men_list.html:23
+msgid "men shoes"
+msgstr "کفش مردانه"
+
+#: .\templates\products\product_update.html:7
+msgid "update"
+msgstr "تغییر"
+
+#: .\templates\products\product_update.html:17
+msgid "update product"
+msgstr "تغییر محصول"
+
+#: .\templates\products\product_women_list.html:23
+msgid "women shoes"
+msgstr "کفش زنانه"
+
+#: .\views.py:65
+msgid "Your comment successfully saved"
+msgstr "نظر شما با موفقیت ثبت شد"
+
+#: .\views.py:74
+msgid "new product successfully saved."
+msgstr "محصول جدید با موفقیت ثبت شد"
+
+#: .\views.py:87
+msgid "product successfully update"
+msgstr "محصول جدید با موفقیت تغییر کرد"
+
+#: .\views.py:102
+msgid "product successfully delete"
+msgstr "محصول جدید با موفقیت حذف شد"
+
+#~ msgid " this nuts is %(word)s"
+#~ msgstr "این آجیل {{word}} است."

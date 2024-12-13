@@ -2,18 +2,20 @@
 
 {% load crispy_forms_tags %}
 
-{% block page_title %}home page{% endblock page_title %}
+{% load i18n %}
+
+{% block page_title %}{% trans 'home page' %}{% endblock page_title %}
 
 {% block content %}
 
-    <h2>homeeee</h2> <br>
+    <h2>{% trans 'home' %}</h2> <br>
 
     {% if user.is_authenticated %}
-        welcome {{ user.username }} |
-        <a class="btn btn-danger" href="{% url 'account_logout' %}">logout</a>
+        {% trans 'welcome' %} {{ user.username }} |
+        <a class="btn btn-danger" href="{% url 'account_logout' %}">{% trans 'logout' %}</a>
     {% else %}
-        <a class="btn btn-info" href="{% url 'account_login' %}">login</a> |
-        <a class="btn btn-primary" href="{% url 'account_signup' %}">signup</a>
+        <a class="btn btn-info" href="{% url 'account_login' %}">{% trans 'login' %}</a> |
+        <a class="btn btn-primary" href="{% url 'account_signup' %}">{% translate 'signup' %}</a>
     {% endif %}
 
 {% endblock content %}
