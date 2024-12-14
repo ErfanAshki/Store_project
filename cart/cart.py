@@ -59,4 +59,3 @@ class Cart:
 
         return sum(product.price for product in products)
 
-        
