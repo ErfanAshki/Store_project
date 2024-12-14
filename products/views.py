@@ -8,6 +8,7 @@ from django.utils.translation import gettext as _
 
 from .models import Product, Comment
 from .forms import CommentForm
+from cart.forms import AddToCartProductForm
 
 
 class ProductListView(generic.ListView):
