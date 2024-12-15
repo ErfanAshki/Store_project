@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .cart import Cart
 from .forms import AddToCartProductForm
@@ -21,4 +21,6 @@ def add_to_cart_view(request, product_id):
         quantity = cleaned_data['quantity']
         cart.add(product, quantity)
 
-        return redirect('cart:cart_detail')
+    return redirect('cart:cart_detail')
+
+
