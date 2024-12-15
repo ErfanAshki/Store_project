@@ -8,6 +8,7 @@ from django.utils.translation import gettext as _
 
 from .models import Product, Comment
 from .forms import CommentForm
+from cart.forms import AddToCartProductForm
 
 
 class ProductListView(generic.ListView):
@@ -44,6 +45,7 @@ class ProductDetailView(generic.DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comment_form'] = CommentForm()
+        context['AddToCartProductForm'] = AddToCartProductForm()
         return context
 
 
