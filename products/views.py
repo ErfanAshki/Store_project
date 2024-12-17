@@ -2,6 +2,7 @@ from django.shortcuts import render, reverse, get_object_or_404
 from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.utils.translation import gettext as _

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-13 14:14+0330\n"
+"POT-Creation-Date: 2024-12-17 19:00+0330\n"
 "PO-Revision-Date: 2024-12-13 13:43+0330\n"
 "Last-Translator:   <er@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,43 +86,47 @@ msgstr "بله"
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:44
+#: .\templates\products\product_detail.html:47
 #: .\templates\products\product_men_list.html:63
 #: .\templates\products\product_women_list.html:63
 msgid "add to cart"
 msgstr "اضافه به سبد خرید"
 
-#: .\templates\products\product_detail.html:48
+#: .\templates\products\product_detail.html:52
 msgid "category"
 msgstr "دسته بندی"
 
-#: .\templates\products\product_detail.html:56
+#: .\templates\products\product_detail.html:60
 msgid "product changes"
 msgstr "تغییرات محصول"
 
-#: .\templates\products\product_detail.html:71
+#: .\templates\products\product_detail.html:75
 msgid "product description"
 msgstr "توضیحات محصول"
 
-#: .\templates\products\product_detail.html:75
+#: .\templates\products\product_detail.html:79
 msgid "comments"
 msgstr "نظرات "
 
-#: .\templates\products\product_detail.html:88
+#: .\templates\products\product_detail.html:92
 msgid "comments for"
 msgstr "نظرات برای"
 
-#: .\templates\products\product_detail.html:112
+#: .\templates\products\product_detail.html:116
 msgid "comment body"
 msgstr "متن نظر"
 
-#: .\templates\products\product_detail.html:123
+#: .\templates\products\product_detail.html:128
 msgid "write your comment"
 msgstr "نظرتان را بنویسید"
 
-#: .\templates\products\product_detail.html:128
+#: .\templates\products\product_detail.html:135
 msgid "submit"
 msgstr "ارسال"
+
+#: .\templates\products\product_detail.html:141
+msgid "You must login in website to write comments."
+msgstr "برای نوشتن کامنت باید در سایت ثبت نام کنید."
 
 #: .\templates\products\product_list_categories.html:24
 msgid "categories of shoes"
@@ -152,19 +156,19 @@ msgstr "تغییر محصول"
 msgid "women shoes"
 msgstr "کفش زنانه"
 
-#: .\views.py:65
+#: .\views.py:68
 msgid "Your comment successfully saved"
 msgstr "نظر شما با موفقیت ثبت شد"
 
-#: .\views.py:74
+#: .\views.py:77
 msgid "new product successfully saved."
 msgstr "محصول جدید با موفقیت ثبت شد"
 
-#: .\views.py:87
+#: .\views.py:90
 msgid "product successfully update"
 msgstr "محصول جدید با موفقیت تغییر کرد"
 
-#: .\views.py:102
+#: .\views.py:105
 msgid "product successfully delete"
 msgstr "محصول جدید با موفقیت حذف شد"
 
