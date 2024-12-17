@@ -70,4 +70,3 @@ class Cart:
         products = Product.objects.filter(id__in=product_ids)
 
         return sum(product.price for product in products)
-

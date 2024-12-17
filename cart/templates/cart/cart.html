@@ -35,12 +35,12 @@
                                                     <td class="product-remove text-left"><a href=""><i
                                                             class="flaticon flaticon-cross"></i></a></td>
                                                     <td class="product-thumbnail text-left">
-                                                        <img src=""
+                                                        <img src="{{ item.product_obj.image.url }}"
                                                              alt="Product Thumnail">
                                                     </td>
                                                     <td class="product-name wide-column">
                                                         <h3>
-                                                            <a href="product-details.html">{{ item.product_obj.title }}</a>
+                                                            <a href="{{ item.product_obj.get_absolute_url }}">{{ item.product_obj.title }}</a>
                                                         </h3>
                                                     </td>
                                                     <td class="product-price">
