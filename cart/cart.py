@@ -62,6 +62,16 @@ class Cart:
             item['total_price'] = item['quantity'] * item['product_obj'].price
             yield item
 
+    def save(self):
+        self.session.modified = True
+
+    def remove(self, product):
+        product_id = str(product.id)
+
+        if product_id in self.cart:
+            del self.cart[product_id]
+            self.save()
+
     def __len__(self):
         return sum(item['quantity'] for item in self.cart.values())
 
