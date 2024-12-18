@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-17 19:00+0330\n"
-"PO-Revision-Date: 2024-12-13 13:43+0330\n"
+"POT-Creation-Date: 2024-12-18 12:56+0330\n"
+"PO-Revision-Date: 2024-12-18 12:58+0330\n"
 "Last-Translator:   <er@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -81,6 +81,8 @@ msgid "Yes"
 msgstr "بله"
 
 #: .\templates\products\product_detail.html:33
+#: .\templates\products\product_detail.html:178
+#: .\templates\products\product_detail.html:186
 #: .\templates\products\product_men_list.html:60
 #: .\templates\products\product_women_list.html:60
 msgid "$"
@@ -127,6 +129,19 @@ msgstr "ارسال"
 #: .\templates\products\product_detail.html:141
 msgid "You must login in website to write comments."
 msgstr "برای نوشتن کامنت باید در سایت ثبت نام کنید."
+
+#: .\templates\products\product_detail.html:185
+msgid "total price"
+msgstr "جمع کل"
+
+#: .\templates\products\product_detail.html:189
+#| msgid "add to cart"
+msgid "go to cart"
+msgstr "مشاهده سبد خرید"
+
+#: .\templates\products\product_detail.html:190
+msgid "checkout"
+msgstr "پرداخت"
 
 #: .\templates\products\product_list_categories.html:24
 msgid "categories of shoes"
