@@ -8,6 +8,8 @@
 
 {% load crispy_forms_tags %}
 
+{% load jalali_tags %}
+
 {% block page_title %}{{ product.title }} {% trans 'page' %}{% endblock page_title %}
 
 {% block content %}
@@ -101,9 +103,9 @@
                                                                      alt="Review Avatar" class="review__avatar">
                                                                 <div>
                                                                     <div class="review__meta mr-5">
-                                                                        <span class="text-primary">{{ comment.datetime_created }}</span>
-                                                                        <span class="review__dash pr-4">-</span>
                                                                         <strong class="review__author text-success px-4">{{ comment.author }}</strong>
+                                                                        <span class="review__dash pr-4">-</span>
+                                                                        <span class="text-primary">{{ comment.datetime_created |to_jalali:'%Y %B %d'}}</span>
                                                                     </div>
                                                                     <div class="product-rating mr--60">
                                                                         <div class="m-0 star-rating star-five">

@@ -1,4 +1,5 @@
 from django.contrib import admin
+from jalali_date.admin import ModelAdminJalaliMixin
 
 from .models import Product, Comment
 
@@ -9,7 +10,7 @@ class CommentInline(admin.StackedInline):
     extra = 1
 
 
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
     ordering = ['-id']
     list_display = ['id', 'title', 'price', 'category', 'is_pay', 'active', 'datetime_created']
     inlines = [CommentInline, ]
@@ -18,7 +19,7 @@ class ProductAdmin(admin.ModelAdmin):
 admin.site.register(Product, ProductAdmin)
 
 
-class CommentAdmin(admin.ModelAdmin):
+class CommentAdmin(ModelAdminJalaliMixin, admin.ModelAdmin):
     ordering = ['-id']
     list_display = ['id', 'text', 'author', 'product', 'stars', 'active', 'datetime_created']
 

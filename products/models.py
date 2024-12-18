@@ -2,6 +2,7 @@ from django.db import models
 from django.shortcuts import reverse
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
+from django.utils import timezone
 
 
 class Product(models.Model):
@@ -43,7 +44,7 @@ class Comment(models.Model):
     text = models.TextField(verbose_name=_('comment_text'))
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='comments')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments')
-    datetime_created = models.DateTimeField(auto_now_add=True)
+    datetime_created = models.DateTimeField(verbose_name=_('date of creation'), default=timezone.now)
     datetime_modified = models.DateTimeField(auto_now=True)
     stars = models.CharField(max_length=10, choices=STAR_CHOICES, verbose_name=_('rate for this shoes'))
     active = models.BooleanField(default=True)

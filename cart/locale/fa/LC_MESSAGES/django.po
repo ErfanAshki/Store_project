@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 14:04+0330\n"
-"PO-Revision-Date: 2024-12-18 14:04+0330\n"
+"POT-Creation-Date: 2024-12-18 16:28+0330\n"
+"PO-Revision-Date: 2024-12-18 16:28+0330\n"
 "Last-Translator:   <er@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,37 +18,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: .\templates\cart\Breadcrumb.html:11
-msgid "product detail"
-msgstr ""
-
 #: .\templates\cart\cart.html:7
 msgid "cart page"
 msgstr "صفحه سبد خرید"
 
-#: .\templates\cart\cart.html:49 .\templates\cart\cart.html:68
-#: .\templates\cart\cart.html:101 .\templates\cart\cart_side.html:28
+#: .\templates\cart\cart.html:11
+#| msgid "cart page"
+msgid "cart"
+msgstr "سبد خرید"
+
+#: .\templates\cart\cart.html:52 .\templates\cart\cart.html:71
+#: .\templates\cart\cart.html:104 .\templates\cart\cart_side.html:28
 #: .\templates\cart\cart_side.html:36
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\cart\cart.html:77
+#: .\templates\cart\cart.html:80
 msgid "please add some product to your cart"
 msgstr "لطفا ابتدا محصولی را به سبد خرید خود اضافه کنید"
 
-#: .\templates\cart\cart.html:85
+#: .\templates\cart\cart.html:88
 msgid "clear the cart"
 msgstr "خالی کردن سبد خرید"
 
-#: .\templates\cart\cart.html:93
+#: .\templates\cart\cart.html:96
 msgid "total"
 msgstr "مجموع"
 
-#: .\templates\cart\cart.html:97 .\templates\cart\cart_side.html:35
+#: .\templates\cart\cart.html:100 .\templates\cart\cart_side.html:35
 msgid "total price"
 msgstr "جمع کل"
 
-#: .\templates\cart\cart.html:108
+#: .\templates\cart\cart.html:111
 msgid "order"
 msgstr "ثبت سفارش"
 

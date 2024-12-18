@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-18 13:56+0330\n"
-"PO-Revision-Date: 2024-12-18 13:57+0330\n"
+"POT-Creation-Date: 2024-12-18 16:28+0330\n"
+"PO-Revision-Date: 2024-12-18 16:29+0330\n"
 "Last-Translator:   <er@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,31 +18,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: .\models.py:37
+#: .\models.py:38
 msgid "very bad"
 msgstr "خیلی بد"
 
-#: .\models.py:38
+#: .\models.py:39
 msgid "bad"
 msgstr "بد"
 
-#: .\models.py:39
+#: .\models.py:40
 msgid "normal"
 msgstr "معمولی"
 
-#: .\models.py:40
+#: .\models.py:41
 msgid "good"
 msgstr "خوب"
 
-#: .\models.py:41
+#: .\models.py:42
 msgid "very good"
 msgstr "خیلی خوب"
 
-#: .\models.py:43
+#: .\models.py:44
 msgid "comment_text"
 msgstr "متن نظر"
 
-#: .\models.py:48
+#: .\models.py:47
+msgid "date of creation"
+msgstr "تاریخ ایجاد"
+
+#: .\models.py:49
 msgid "rate for this shoes"
 msgstr "امتیاز برای این کفش"
 
@@ -64,7 +68,7 @@ msgid "delete"
 msgstr "حذف کردن"
 
 #: .\templates\products\product_delete.html:7
-#: .\templates\products\product_detail.html:11
+#: .\templates\products\product_detail.html:13
 msgid "page"
 msgstr "صفحه"
 
@@ -80,56 +84,51 @@ msgstr "آیا می خواهی حذف کنی"
 msgid "Yes"
 msgstr "بله"
 
-#: .\templates\products\product_detail.html:21
-#| msgid "product description"
-msgid "product detail"
-msgstr "جزییات محصول"
-
-#: .\templates\products\product_detail.html:46
+#: .\templates\products\product_detail.html:36
 #: .\templates\products\product_men_list.html:60
 #: .\templates\products\product_women_list.html:60
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:60
+#: .\templates\products\product_detail.html:50
 #: .\templates\products\product_men_list.html:63
 #: .\templates\products\product_women_list.html:63
 msgid "add to cart"
 msgstr "اضافه به سبد خرید"
 
-#: .\templates\products\product_detail.html:65
+#: .\templates\products\product_detail.html:55
 msgid "category"
 msgstr "دسته بندی"
 
-#: .\templates\products\product_detail.html:73
+#: .\templates\products\product_detail.html:63
 msgid "product changes"
 msgstr "تغییرات محصول"
 
-#: .\templates\products\product_detail.html:88
+#: .\templates\products\product_detail.html:78
 msgid "product description"
 msgstr "توضیحات محصول"
 
-#: .\templates\products\product_detail.html:92
+#: .\templates\products\product_detail.html:82
 msgid "comments"
 msgstr "نظرات "
 
-#: .\templates\products\product_detail.html:105
+#: .\templates\products\product_detail.html:95
 msgid "comments for"
 msgstr "نظرات برای"
 
-#: .\templates\products\product_detail.html:129
+#: .\templates\products\product_detail.html:119
 msgid "comment body"
 msgstr "متن نظر"
 
-#: .\templates\products\product_detail.html:141
+#: .\templates\products\product_detail.html:131
 msgid "write your comment"
 msgstr "نظرتان را بنویسید"
 
-#: .\templates\products\product_detail.html:148
+#: .\templates\products\product_detail.html:138
 msgid "submit"
 msgstr "ارسال"
 
-#: .\templates\products\product_detail.html:154
+#: .\templates\products\product_detail.html:144
 msgid "You must login in website to write comments."
 msgstr "برای نوشتن کامنت باید در سایت ثبت نام کنید."
 
@@ -150,7 +149,6 @@ msgid "Women shoes"
 msgstr "کفش زنانه"
 
 #: .\templates\products\product_men_list.html:7
-#| msgid "men shoes"
 msgid "men shoes list page"
 msgstr "صفحه لیست کفش های مردانه"
 
@@ -167,7 +165,6 @@ msgid "update product"
 msgstr "تغییر محصول"
 
 #: .\templates\products\product_women_list.html:7
-#| msgid "women shoes"
 msgid "women shoes list page"
 msgstr "صفحه لیست کفش های زنانه"
 
@@ -190,6 +187,9 @@ msgstr "محصول جدید با موفقیت تغییر کرد"
 #: .\views.py:105
 msgid "product successfully delete"
 msgstr "محصول جدید با موفقیت حذف شد"
+
+#~ msgid "product detail"
+#~ msgstr "جزییات محصول"
 
 #~ msgid "total price"
 #~ msgstr "جمع کل"
