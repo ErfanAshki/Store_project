@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-13 14:14+0330\n"
-"PO-Revision-Date: 2024-12-13 13:43+0330\n"
+"POT-Creation-Date: 2024-12-18 13:56+0330\n"
+"PO-Revision-Date: 2024-12-18 13:57+0330\n"
 "Last-Translator:   <er@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -80,49 +80,62 @@ msgstr "آیا می خواهی حذف کنی"
 msgid "Yes"
 msgstr "بله"
 
-#: .\templates\products\product_detail.html:33
+#: .\templates\products\product_detail.html:21
+#| msgid "product description"
+msgid "product detail"
+msgstr "جزییات محصول"
+
+#: .\templates\products\product_detail.html:46
 #: .\templates\products\product_men_list.html:60
 #: .\templates\products\product_women_list.html:60
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\products\product_detail.html:44
+#: .\templates\products\product_detail.html:60
 #: .\templates\products\product_men_list.html:63
 #: .\templates\products\product_women_list.html:63
 msgid "add to cart"
 msgstr "اضافه به سبد خرید"
 
-#: .\templates\products\product_detail.html:48
+#: .\templates\products\product_detail.html:65
 msgid "category"
 msgstr "دسته بندی"
 
-#: .\templates\products\product_detail.html:56
+#: .\templates\products\product_detail.html:73
 msgid "product changes"
 msgstr "تغییرات محصول"
 
-#: .\templates\products\product_detail.html:71
+#: .\templates\products\product_detail.html:88
 msgid "product description"
 msgstr "توضیحات محصول"
 
-#: .\templates\products\product_detail.html:75
+#: .\templates\products\product_detail.html:92
 msgid "comments"
 msgstr "نظرات "
 
-#: .\templates\products\product_detail.html:88
+#: .\templates\products\product_detail.html:105
 msgid "comments for"
 msgstr "نظرات برای"
 
-#: .\templates\products\product_detail.html:112
+#: .\templates\products\product_detail.html:129
 msgid "comment body"
 msgstr "متن نظر"
 
-#: .\templates\products\product_detail.html:123
+#: .\templates\products\product_detail.html:141
 msgid "write your comment"
 msgstr "نظرتان را بنویسید"
 
-#: .\templates\products\product_detail.html:128
+#: .\templates\products\product_detail.html:148
 msgid "submit"
 msgstr "ارسال"
+
+#: .\templates\products\product_detail.html:154
+msgid "You must login in website to write comments."
+msgstr "برای نوشتن کامنت باید در سایت ثبت نام کنید."
+
+#: .\templates\products\product_list_categories.html:7
+msgid "shoes categories list page"
+msgstr "صفحه لیست دسته بندی کفش ها"
 
 #: .\templates\products\product_list_categories.html:24
 msgid "categories of shoes"
@@ -136,6 +149,11 @@ msgstr "کفش مردانه"
 msgid "Women shoes"
 msgstr "کفش زنانه"
 
+#: .\templates\products\product_men_list.html:7
+#| msgid "men shoes"
+msgid "men shoes list page"
+msgstr "صفحه لیست کفش های مردانه"
+
 #: .\templates\products\product_men_list.html:23
 msgid "men shoes"
 msgstr "کفش مردانه"
@@ -148,25 +166,39 @@ msgstr "تغییر"
 msgid "update product"
 msgstr "تغییر محصول"
 
+#: .\templates\products\product_women_list.html:7
+#| msgid "women shoes"
+msgid "women shoes list page"
+msgstr "صفحه لیست کفش های زنانه"
+
 #: .\templates\products\product_women_list.html:23
 msgid "women shoes"
 msgstr "کفش زنانه"
 
-#: .\views.py:65
+#: .\views.py:68
 msgid "Your comment successfully saved"
 msgstr "نظر شما با موفقیت ثبت شد"
 
-#: .\views.py:74
+#: .\views.py:77
 msgid "new product successfully saved."
 msgstr "محصول جدید با موفقیت ثبت شد"
 
-#: .\views.py:87
+#: .\views.py:90
 msgid "product successfully update"
 msgstr "محصول جدید با موفقیت تغییر کرد"
 
-#: .\views.py:102
+#: .\views.py:105
 msgid "product successfully delete"
 msgstr "محصول جدید با موفقیت حذف شد"
+
+#~ msgid "total price"
+#~ msgstr "جمع کل"
+
+#~ msgid "go to cart"
+#~ msgstr "مشاهده سبد خرید"
+
+#~ msgid "checkout"
+#~ msgstr "پرداخت"
 
 #~ msgid " this nuts is %(word)s"
 #~ msgstr "این آجیل {{word}} است."

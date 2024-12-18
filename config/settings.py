@@ -42,11 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django.contrib.sessions.serializers.PickleSerializer'
 
     # local apps
     'accounts',
     'pages',
     'products',
+    'cart',
 
     # downloaded apps
     'crispy_forms',
@@ -93,6 +95,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # my context processors
+                'cart.context_processors.cart',
             ],
         },
     },
