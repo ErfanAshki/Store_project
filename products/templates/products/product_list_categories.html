@@ -4,7 +4,7 @@
 
 {% load crispy_forms_tags %}
 
-{% block page_title %}product list page{% endblock page_title %}
+{% block page_title %}{% trans 'shoes categories list page' %}{% endblock page_title %}
 
 {% block content %}
 
@@ -94,6 +94,8 @@
         <!-- Main Content Wrapper Start -->
     </div>
     <!-- Main Wrapper End -->
+
+    {% include 'cart/cart_side.html' %}
 
 {% endblock content %}
 
