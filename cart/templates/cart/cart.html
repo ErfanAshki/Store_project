@@ -8,6 +8,9 @@
 
 {% block content %}
 
+    {% trans 'cart' as x %}
+    {% include 'cart/Breadcrumb.html' with breadcrumb=x %}
+
     <!-- Main Content Wrapper Start -->
     <div class="main-content-wrapper">
         <div class="page-content-inner ptb--80">
