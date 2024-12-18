@@ -3,6 +3,7 @@ from django.shortcuts import reverse
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 
 
 class Product(models.Model):
@@ -11,7 +12,7 @@ class Product(models.Model):
         ('Women shoes', 'Women shoes')
     )
     title = models.CharField(max_length=150)
-    body = models.TextField()
+    body = RichTextField()
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=20)
     price = models.PositiveIntegerField(default=100)
     datetime_created = models.DateTimeField(auto_now_add=True)
