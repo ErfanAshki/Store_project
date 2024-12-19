@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'pages',
     'products',
     'cart',
+    'orders',
 
     # downloaded apps
     'crispy_forms',
@@ -60,6 +61,8 @@ INSTALLED_APPS = [
     'rosetta',
     'jalali_date',
     'ckeditor',
+    'phonenumber_field',
+
 
 ]
 
