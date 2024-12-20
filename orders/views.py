@@ -7,6 +7,7 @@ from .models import Order, OrderItem
 
 @login_required
 def order_create_view(request):
+    order_form = OrderForm()
     if request.method == 'POST':
         order_form = OrderForm(request.POST)
         if order_form.is_valid():
@@ -14,6 +15,6 @@ def order_create_view(request):
             order_obj.user = request.user
             order_obj.save()
 
-    return render(request, 'orders/order.html')
+    return render(request, 'orders/order.html', {'order_form': order_form})
 
 

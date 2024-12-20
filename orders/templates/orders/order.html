@@ -27,14 +27,19 @@
                             <h2>جزئیات سفارش</h2>
                         </div>
                         <div class="checkout-form">
-                            <form action="#" class="form form--checkout" method="post">
+                            <form action="" class="form form--checkout" method="POST">
                                 {% csrf_token %}
+                                {% if order_form.errors %}
+                                    <div class="alert alert-danger">
+                                        {{ order_form.errors }}
+                                    </div>
+                                {% endif %}
                                 <div class="form-row mb--20">
                                     <div class="form__group col-md-6 mb-sm--30">
                                         <label for="first_name"
                                                class="form__label form__label--2">نام <span
                                                 class="required">*</span></label>
-                                        <input type="text" name="first_name"
+                                        <input type="text" name="{{ order_form.first_name.name }}"
                                                id="first_name"
                                                class="form__input form__input--2">
                                     </div>
@@ -43,7 +48,7 @@
                                                class="form__label form__label--2">نام
                                             خانوادگی <span
                                                     class="required">*</span></label>
-                                        <input type="text" name="last_name"
+                                        <input type="text" name="{{ order_form.last_name.name }}"
                                                id="last_name"
                                                class="form__input form__input--2">
                                     </div>
@@ -54,7 +59,7 @@
                                                class="form__label form__label--2">شماره
                                             همراه <span
                                                     class="required">*</span></label>
-                                        <input type="text" name="phone_number"
+                                        <input type="text" name="{{ order_form.phone_number.name }}"
                                                id="phone_number"
                                                class="form__input form__input--2">
                                     </div>
@@ -63,7 +68,7 @@
                                     <div class="form__group col-12">
                                         <label for="address"
                                                class="form__label form__label--2">آدرس</label>
-                                        <input type="text" name="address"
+                                        <input type="text" name="{{ order_form.address.name }}"
                                                id="address"
                                                class="form__input form__input--2">
                                     </div>
@@ -75,7 +80,7 @@
                                             شما</label>
                                         <textarea
                                                 class="form__input form__input--2 form__input--textarea"
-                                                id="notes" name="notes"
+                                                id="notes" name="{{ order_form.notes.name }}"
                                                 placeholder="اگر یادداشتی دارید در اینجا وارد کنید. در غیر این صورت این مکان را خالی بگذارید"></textarea>
                                     </div>
                                 </div>
