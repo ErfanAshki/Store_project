@@ -29,21 +29,23 @@
                                         </a>
                                     </span>
                                 <span class="mini-cart__product__quantity">
-                                        <span>{{ item.product_obj.price|intcomma:False|translate_number  }} {% trans '$' %}</span> &#215; <span>{{ item.quantity }}</span>
+                                        <span>{{ item.product_obj.price|intcomma:False|translate_number }} {% trans '$' %}</span> &#215; <span>{{ item.quantity }}</span>
                                     </span>
                             </div>
                         </li>
                     {% endfor %}
                 </ul>
-                <div class="mini-cart__total">
-                    <span>{% trans 'total price' %}</span>
-                    <span class="ammount">{{ cart.get_total_price|intcomma:False|translate_number  }} {% trans '$' %}</span>
-                </div>
-                <div class="mini-cart__buttons">
-                    <a href="{% url 'cart:cart_detail' %}"
-                       class="btn btn-fullwidth btn-bg-sand mb--20">{% trans 'go to cart' %}</a>
-                    <a href="checkout.html" class="btn btn-fullwidth btn-bg-sand">{% trans 'checkout' %}</a>
-                </div>
+                {% if cart %}
+                    <div class="mini-cart__total">
+                        <span>{% trans 'total price' %}</span>
+                        <span class="ammount">{{ cart.get_total_price|intcomma:False|translate_number }} {% trans '$' %}</span>
+                    </div>
+                    <div class="mini-cart__buttons">
+                        <a href="{% url 'cart:cart_detail' %}"
+                           class="btn btn-fullwidth btn-bg-sand mb--20">{% trans 'go to cart' %}</a>
+                        <a href="{% url 'order_create' %}" class="btn btn-fullwidth btn-bg-sand">{% trans 'checkout' %}</a>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
