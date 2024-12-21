@@ -14,6 +14,8 @@ class Order(models.Model):
     datetime_created = models.DateTimeField(auto_now_add=True)
     is_paid = models.BooleanField(default=False)
     authority = models.CharField(max_length=250, blank=True)
+    ref_id = models.CharField(max_length=250, blank=True)
+    zarinpal_data = models.TextField(blank=True)
 
     def __str__(self):
         return f"{self.id} --> {self.user}"
