@@ -11,8 +11,8 @@ services:
     depends_on:
       - db
     environment:
-      - "DJANGO_SECRET_KEY=django-insecure-f*%&#2yr6$$u(%fk4cbc($$4&!&gw-o08fb78_za#nfdo85m7yyy"
-      - "DJANGO_DEBUG=True"
+      - "DJANGO_SECRET_KEY=${DOCKER_COMPOSE_DJANGO_SECRET_KEY}"
+      - "DJANGO_DEBUG=${DOCKER_COMPOSE_DJANGO_DEBUG}"
 
 
   db:
