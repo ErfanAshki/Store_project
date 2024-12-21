@@ -13,9 +13,13 @@ class Order(models.Model):
     notes = models.TextField(blank=True, null=True, verbose_name=_('notes'))
     datetime_created = models.DateTimeField(auto_now_add=True)
     is_paid = models.BooleanField(default=False)
+    authority = models.CharField(max_length=250, blank=True)
 
     def __str__(self):
         return f"{self.id} --> {self.user}"
+
+    def get_total_price(self):
+        return sum(item.quantity * item.price for item in self.items.all())
 
 
 class OrderItem(models.Model):
