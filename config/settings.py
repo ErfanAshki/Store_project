@@ -213,3 +213,7 @@ EMAIL_PORT = 587
 MESSAGE_TAGS = {
     constants. ERROR: 'danger',
 }
+
+# zarinpal
+MERCHANT_ID = env('DJANGO_MERCHANT_ID')
+
